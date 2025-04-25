@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for books using Google Books API">
+    <title>Google Books API Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1><i class="fab fa-google"></i> Google Books Explorer</h1>
+        <p>Search for books using the Google Books API</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for books..." 
+                   aria-label="Search for books" value="javascript">
+            <button id="searchButton" aria-label="Search">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+
+        <div id="loadingIndicator" class="loading" hidden>
+            <i class="fas fa-spinner fa-spin"></i> Loading books...
+        </div>
+
+        <ul id="bookList" aria-live="polite"></ul>
+    </main>
+
+    <footer>
+        <p>Powered by Google Books API | &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
